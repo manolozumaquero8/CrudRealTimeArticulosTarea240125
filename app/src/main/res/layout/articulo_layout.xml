@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00A4FF"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="12dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E465F2"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tv_nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Nombre"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_descripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="Descripción"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_precio_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="228dp"
+            android:layout_marginTop="16dp"
+            android:text="Precio:"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_descripcion" />
+
+        <TextView
+            android:id="@+id/tv_articulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cantidad"
+            app:layout_constraintStart_toEndOf="@+id/tv_precio_label"
+            app:layout_constraintTop_toTopOf="@+id/tv_precio_label"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_precio_label" />
+
+        <Button
+            android:id="@+id/bt_borrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="#FF0000"
+            android:text="ELIMINAR"
+            app:layout_constraintEnd_toStartOf="@+id/bt_editar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_precio_label" />
+
+        <Button
+            android:id="@+id/bt_editar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            android:backgroundTint="#00A4FF"
+            android:text="EDITAR"
+            app:layout_constraintBottom_toBottomOf="@+id/bt_borrar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bt_borrar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
